@@ -1,0 +1,205 @@
+/*** MENU ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+	width:158px;
+	text-align:center;
+	background:url(../images/menu-bg.gif) repeat-x 0 0 #182f00;
+}
+nav {
+	box-shadow:0 1px 1px #151313;
+	width:100%;
+	margin-bottom: 14px;	
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+	text-transform:uppercase;
+	font-size:18px;
+	padding: 30px 0 38px;
+	color:#fff;
+	letter-spacing: -1px;
+	background:url(../images/divider2.gif) repeat-y right 0;
+	line-height:22px;	
+}
+
+.sf-menu > li:hover,
+.sf-menu > li.current,
+.sf-menu > li.sfHover {
+	background:url(../images/menu-bg-hov.gif) repeat-x 0 0 #172e00;
+	text-decoration:none;
+}
+
+.sf-menu li:hover i,
+.sf-menu li.sfHover > i {
+	color:#c78d27;
+}
+
+.sf-menu li:hover .sf-sub-indicator,
+.sf-menu li.sfHover > .sf-sub-indicator {
+	background-position: 0 -67px;
+}
+
+.sf-menu li.current i {
+	color:#9dae62;
+}
+
+.sf-menu a i {
+    color: #647b14;
+    display: block;
+    font-size: 13px;
+    font-style: normal;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    top: 19px;
+    white-space: nowrap;
+}
+
+.sf-menu a strong {
+	font-weight:normal;
+	display:inline-block;
+	position:relative;
+}
+
+.last2 {
+	width:150px !important;
+}
+
+.last2 a {background:none !important;}
+
+
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			157px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul ul {
+	position:		absolute;
+	top:			-999em;
+	min-width:		360px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul ul li {
+	margin-right: 2px;
+    width: 151px;
+	background:none;
+	display:inline-block;
+}
+
+.sf-menu ul li {
+	width:			100%;
+	background:none;
+}
+
+.sf-menu ul a {
+	background:#2b2c28;
+	font-size:16px;
+	line-height:20px;
+	letter-spacing:0;
+	padding:27px 0 28px;
+}
+
+.sf-menu ul > li > a:hover,
+.sf-menu ul li.sfHover > a {
+	background:url(../images/menu-bg-hov2.gif) repeat-x 0 bottom #445b02;
+	text-decoration:none;
+}
+
+.sf-menu ul ul a:hover,
+.sf-menu ul ul li.sfHover > a {
+	color:#c78d27;
+	background:#2B2C28;
+	text-decoration:none;
+}
+
+.sf-menu ul ul a {
+	letter-spacing:1px;
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			90px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			159px; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+.sf-menu li.sub-menu:after {
+    background:url(../images/sub-marker.png) no-repeat 0 0;
+	left: 46%;
+    position: absolute;
+    top: 69px;
+	width:11px;
+	height:6px;
+	content: '';
+}
+
+.sf-menu ul li.sub-menu:after {
+    left: 82%;
+    top: 35px;
+}
+
+
+/* Design for a width of 768px */
+@media only screen and (max-width: 995px) {
+
+	
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+
+nav select {
+    display: block !important;
+    height: 23px;
+    line-height: 23px;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+}
+
+nav span,
+.sf-menu{display:none !important;}
+
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+nav span,
+.sf-menu{display:none}
+ 
+}
