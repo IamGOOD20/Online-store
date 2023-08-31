@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<section id="content">
+    <div class="container_12">
+        <article class="grid_8">
+            <div class='inner-block'>
+                <h2 class="main_h2 p10 margin-bot">blog</h2>
+                <div class="page5-box1 indent-bot3">
+                    <a class="link4" href="#">Fusce euismod consequat ante. </a>
+                    <div class="inner3">Submitted by Admin on Thu, 05/12/2012 - 18:27, <a class="link5" href="#">25 comments</a></div>
+                    <div class="page5-box2">
+                        <figure class="page5-img1"><img src="{% static 'images/page5-img1.jpg' %}" alt=""></figure>
+                                <div class="extra-wrap">
+                                    <a class="link4 p25" href="#">Fusce euismod consequat ante. </a>
+                                    <p class="p20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                    <a class="button2 p24" href="#">more</a><a class="button2" href="#">add new comment</a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="page5-box1">
+                        <a class="link4" href="#">cursus eleifend, elit. Aenean auctor wisi et urna.</a>
+                        <div class="inner3">Submitted by Admin on Thu, 05/12/2012 - 18:27, <a class="link5" href="#">15 comments</a></div>
+                            <div class="page5-box2">
+                                <figure class="page5-img1"><img src="{% static 'images/page5-img2.jpg' %}" alt=""></figure>
+                                <div class="extra-wrap">
+                                    <a class="link4 p25" href="#">Aliquam congue fermentum nisl. </a>
+                                    <p class="p20">Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. </p>
+                                    <a class="button2 p24" href="#">more</a><a class="button2" href="#">add new comment</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </article>
+                    <article class="grid_4">
+                    	<div class="inner-block">
+                            <h2 class="main_h2 p10">meta</h2>
+                            <ul class="list2">
+                                <li><a href="#">Site Admin</a></li>
+                                <li><a href="#">Log out</a></li>
+                                <li><a href="#">Entries RSS</a></li>
+                                <li><a href="#">Comments RSS</a></li>
+                                <li><a href="#">WordPress.org</a></li>
+                            </ul>
+                            <h2 class="main_h2 p10">Recent Posts</h2>
+                            <ul class="list2">
+                                <li><a href="#">Vestibulum iaculis lacinia </a></li>
+                                <li><a href="#">Proin dictum elementum</a></li>
+                                <li><a href="#">Fusce euismod consequat </a></li>
+                                <li><a href="#">Lorem ipsum dolor sit</a></li>
+                                <li><a href="#">Consectetuer adipiscing </a></li>
+                                <li><a href="#">Pellentesque sed dolor</a></li>
+                                <li><a href="#">Nulla venenatis lorem</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                <div class="clear"></div>
+            </div>
+</section>
+{% endblock content %}

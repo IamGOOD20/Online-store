@@ -80,84 +80,80 @@ height: 'auto',
 </head>
 <body>
 <div class="bg">
-
-<!--==============================header=================================-->
     <header>
     	<div class="container_12">
         	<article class="grid_12">
             <div class="inner-block">
               <div class="head-box2">
                   <a class="logo" href="index.html">logo</a><span class="text1">farming company</span>
-                  <div class="head-box1"
-                    <form id="search-form" action="search.php" method="GET">
-                        <fieldset>
-                            <div class="search-form">
-                                <input type="text" name="s" />
-                                <a href="#" onClick="document.getElementById('search-form').submit()"></a>
-                            </div>
-                        </fieldset>
-                    </form>
+                  <div class="head-box1">
+                      <form id="search-form" action="search.php" method="GET">
+                          <fieldset>
+                              <div class="search-form">
+                                  <input type="text" name="s" />
+                                  <a href="#" onClick="document.getElementById('search-form').submit()"></a>
+                              </div>
+                          </fieldset>
+                      </form>
+                      <div class="clear"></div>
+                      <ul class="list1">
+                          <li><a href="#">Support</a></li>
+                          <li><a href="#">FAQs</a></li>
+                          <li><a href="#">Sitemap</a></li>
+                          <li class="last1"><a href="#">Help</a></li>
+                      </ul>
+                  </div>
                   <div class="clear"></div>
-                  <ul class="list1">
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li class="last1"><a href="#">Help</a></li>
-                  </ul>
               </div>
-              <div class="clear"></div>
+                <nav>
+                    <ul class="sf-menu responsive-menu">
+                        <li class="current"><a href="/"><strong>Home<i>Your Start</i></strong></a></li>
+                        <li class="sub-menu"><a href="{% url 'about' %}"><strong>About us <i>Who We Are</i></strong></a>
+                            <ul>
+                                <li><a href="#">History</a></li>
+                                <li class='sub-menu'><a href="#">News</a>
+                                    <ul>
+                                        <li><a href="#">Latest</a></li>
+                                        <li><a href="#">Archive</a></li>
+                                      </ul>
+                                      </li>
+                                        <li><a href="#">Resources</a></li>
+                                      </ul>
+                                  </li>
+                                    <li><a href="{% url 'services' %}"><strong>Services<i>capabilities</i></strong></a></li>
+                                    <li><a href="{% url 'products' %}"><strong>Products<i>what we do</i></strong></a></li>
+                                    <li><a href="{% url 'blog' %}"><strong>Blog <i>Blog Page</i></strong></a></li>
+                                    <li class="last2"><a href="{% url 'contacts' %}"><strong>Contacts <i>How To Find Us</i></strong></a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
             </div>
-            <nav>
-            <ul class="sf-menu responsive-menu">
-                <li class="current"><a href="/"><strong>Home <i>Your Start</i></strong></a></li>
-                <li class="sub-menu"><a href="{% url 'about' %}"><strong>About us <i>Who We Are</i></strong></a>
-            <ul>
-                <li><a href="#">History</a></li>
-                <li class='sub-menu'><a href="#">News</a>
-            <ul>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Archive</a></li>
-            </ul>
-                </li>
-                <li><a href="#">Resources</a></li>
-            </ul>
-                </li>
-                <li><a href="index-2.html"><strong>Services <i>capabilities</i></strong></a></li>
-                <li><a href="index-3.html"><strong>Products <i>what we do</i></strong></a></li>
-                <li><a href="index-4.html"><strong>Blog <i>Blog Page</i></strong></a></li>
-                <li class="last2"><a href="index-5.html"><strong>Contacts <i>How To Find Us</i></strong></a></li>
-            </ul>
+            </article>
             <div class="clear"></div>
-            </nav>
         </div>
-        </article>
 {% block content %}
 
 
 {% endblock content %}
-
-    <footer>
-        <div class="container_12">
-        	<article class="grid_12">
+<footer>
+    <div class="container_12">
+        <article class="grid_12">
             <div class="inner-block">
-              <ul class="social-links">
-                  <li><a href="#" class="link-1" title="Twitter"></a></li>
-                  <li><a href="#" class="link-2" title="Facebook"></a></li>
-                  <li><a href="#" class="link-3" title="Flickr"></a></li>
-                  <li><a href="#" class="link-4" title="RSS"></a></li>
-                  <li><a href="#" class="link-5" title="Google+"></a></li>
-              </ul>
-              <div class="page-foot">
-                  <span>agro</span><div class="inner-foot">&copy; 2013 | <a href="index-6.html">Privacy policy</a></div>
-              </div>
-                  <span class="text6">Follow us:</span>
-                  <div class="foot"><!-- {%FOOTER_LINK} --></div>
-                  <div class="clear"></div>
+                <ul class="social-links">
+                    <li><a href="#" class="link-1" title="Twitter"></a></li>
+                    <li><a href="#" class="link-2" title="Facebook"></a></li>
+                    <li><a href="#" class="link-3" title="Flickr"></a></li>
+                    <li><a href="#" class="link-4" title="RSS"></a></li>
+                    <li><a href="#" class="link-5" title="Google+"></a></li>
+                </ul>
+                <div class="page-foot">
+                    <span>agro</span><div class="inner-foot">&copy; 2013 | <a href="index-6.html">Privacy policy</a></div>
+                </div>
+                <span class="text6">Follow us:</span>
+                <div class="foot"><!-- {%FOOTER_LINK} --></div>
+                <div class="clear"></div>
             </div>
-          </article>
-          <div class="clear"></div>
-        </div>
-    </footer>
-</div>
-</body>
-</html>
+        </article>
+        <div class="clear"></div>
+    </div>
+</footer>
