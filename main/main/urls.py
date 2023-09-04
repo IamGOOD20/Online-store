@@ -26,4 +26,5 @@ urlpatterns = [
     path('products/', views.products, name='products'),
     path('blog/', views.blog, name='blog'),
     path('contacts/', views.contacts, name='contacts'),
+    path('auth/', include('authentication.urls')),
 ]
