@@ -98,7 +98,12 @@ height: 'auto',
                       <div class="clear"></div>
                       <ul class="list1">
                           <li><a href="#">Cart</a></li>
-                          <li><a href="{% url 'login' %}">Account</a></li>
+                          {% if user.is_authenticated %}
+                            Hello, {{ user.username }}
+                          {% else %}}
+                            <li><a href="{% url 'login' %}">Register</a></li>
+                            <li><a href="#">Log IN</a></li>
+                          {% endif %}
                           <!--<li><a href="#">Log IN</a></li>-->
                           <!--<li><a href="#">Support</a></li>
                           <li><a href="#">FAQs</a></li>
