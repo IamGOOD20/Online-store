@@ -14,7 +14,9 @@
             <div class="text">
                 LOGIN
             </div>
-            <form>
+            <form method="post" action="{% url 'authentication' %}">
+                                {{ login_form }}
+                                {% csrf_token %}
                 <div class="field">
                     <div class="fas fa-envelope"></div>
                     <input type="text" placeholder="Email or Phone">

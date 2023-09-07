@@ -99,10 +99,10 @@ height: 'auto',
                       <ul class="list1">
                           <li><a href="#">Cart</a></li>
                           {% if user.is_authenticated %}
-                            Hello, {{ user.username }}
-                          {% else %}}
-                            <li><a href="{% url 'login' %}">Register</a></li>
-                            <li><a href="#">Log IN</a></li>
+                            <li>Hello, {{ user.username }}</li>
+                            <li><a href="{% url 'logout' %}">Log out</a></li>
+                          {% else %}
+                            <li><a href="{% url 'authentication' %}">account</a></li>
                           {% endif %}
                           <!--<li><a href="#">Log IN</a></li>-->
                           <!--<li><a href="#">Support</a></li>
