@@ -1,37 +1,22 @@
 {% extends 'main/base.html' %}
-{% load static %}
+
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Title</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    </head>
-    <body>
-        <div class="login-form">
-            <div class="text">
-                LOGIN
-            </div>
-            <form method="post" action="{% url 'authentication' %}">
-                                {{ login_form }}
-                                {% csrf_token %}
-                <div class="field">
-                    <div class="fas fa-envelope"></div>
-                    <input type="text" placeholder="Email or Phone">
-                </div>
-                <div class="field">
-                    <div class="fas fa-lock"></div>
-                    <input type="password" placeholder="Password">
-                </div>
-                <button>LOG IN</button>
-                <div class="link">
-                    Don't have an account?
-                    <a href="#">Sign Up now</a>
-                </div>
-            </form>
-        </div>
-    </body>
-</html>
+
+<h1>{{title}}</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+<div class="form-error">{{ form.non_field_errors }}</div>
+
+{% for f in form %}
+
+<p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+<div class="form-error">{{ f.errors }}</div>
+{% endfor %}
+
+    <button type="submit">Enter</button>
+</form>
+
 {% endblock content %}
