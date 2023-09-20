@@ -1,8 +1,13 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
+# def index(requests):
+#     data = {'title': 'Home'}
+#     return render(requests, 'main/index.html', context=data)
+
 def index(requests):
-    data = {'title': 'Home'}
-    return render(requests, 'main/index.html', context=data)
+    '''home page'''
+    return HttpResponse('<html><title>Home</title></html>')
 
 def about(requests):
     data = {'title': 'about'}
@@ -23,3 +28,4 @@ def blog(requests):
 def contacts(requests):
     data = {'title': 'contacts'}
     return render(requests, 'main/contacts.html', context=data)
+
